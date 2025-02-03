@@ -1,0 +1,322 @@
+/*Style generaux*/
+
+body{
+    font-family: arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/*Barre de navigation*/
+.header{
+    display: flex;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    height: auto;
+    right: 0px;
+    left: 0px;
+    top: 0;
+    justify-content: space-evenly;
+    padding: 20px;
+    background:#d8c8b4;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    flex: 1;
+    display: flex;
+    justify-content: center; /*le logo est au centre de la boite "logo" */
+}
+
+#logo{
+    border: 2px solid black;
+    width: 100%;
+    max-width: 100px;
+}
+
+/* Menu Hamburger */
+.menu-toggle {
+    display: none; /* Bouton masqué par défaut sur les grands écrans */
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordures */
+    font-size: 1.5rem; /* Taille du bouton pour qu'il soit bien visible */
+    color: #fff; /* Couleur blanche pour le bouton */
+    cursor: pointer; /* Change le curseur au survol */
+}
+
+.navigation{
+    flex: 3;
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+
+.main-menu{
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    justify-content: space-between;
+}
+
+/*les boutons du top menu*/
+.top-menu{
+    border:none;
+    background: none;
+    cursor: pointer;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    font-size: 1.5rem;
+    /*couleur et ecriture*/
+}
+
+.top-menu:hover{
+    color: #555; /* Fond gris au survol */
+}
+
+.commande{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+#commander{
+    border: 2px solid black;
+    background: pink;
+    margin: 10px;
+    font-size: 2rem;
+    border-radius: 10px;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+#commander:hover{
+    background: palevioletred;
+}
+
+
+/*La photo d'entrée*/
+/*
+element.style{
+    background-image: url(images/hero.png;);
+}
+*/
+
+.hero{
+    position: relative;
+    height: calc(100vh - 160px); /*peut mettre 150px pour qu'elle soit un peut en dessous*/
+    margin-top: 160px;
+    width:100%;
+    background: url(images/hero.png) no-repeat center center/cover;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    
+}
+
+.hero-content{
+    line-height: 400%;
+    color: white;
+    text-shadow: 1px 1px 2px pink;
+}
+
+/* faire brand name... avec la meme police*/
+.brand-name{
+    font-family: 'Cagliostro', sans-serif;
+    font-weight: bold;
+    line-height: 70%;
+}
+
+.name-brand{
+    font-size: 350%;
+}
+
+#type-cuisine{
+    font-stretch: expanded;
+}
+
+/*Partie intro de la page*/
+.intro, .menu{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+p{
+    text-align: start; 
+    /*font-size: small;*/
+    font-weight: normal; /*ou lighter*/
+}
+
+#sep1{
+    width: 100%;
+    height: calc(100vh / 4);
+    object-fit: cover;
+    margin: 10px;
+}
+
+/*Menu*/
+.grille-menu{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.product{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food{
+    border: 1px solid pink;
+    padding: 10px;
+    margin: 10px;
+    line-height: 300%;
+}
+
+.name-food{
+    font-size: larger;
+    text-align: left;
+    font-weight: bold;
+}
+.price-food{
+    font-size: larger;
+    text-align: right;
+    font-weight: bold;
+}
+
+.description-food{
+    font-size: smaller;
+    text-align: left;
+    line-height: 90%;
+    color:#555;
+}
+
+.menu-button-content{
+    /*padding: 20px;*/
+    margin: 20px;
+}
+
+.button-menu{
+    font-size: larger;
+    color: palevioletred;
+    background: pink;
+    cursor: pointer;
+    transform: scale(1.7);
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+.button-menu:hover{
+    color: pink;
+    border: 2px solid pink;
+    background: none;
+}
+
+/*FOOTER*/
+.footer{
+    background:grey;
+}
+
+.info-footer{
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+}
+
+.Contact{
+    padding: 20px;
+    margin: 20px;
+}
+
+#cpright{
+    text-align: center;
+}
+
+.info{
+    display: none !important;
+}
+
+
+
+/*FAIRE EN SORTE DE POUVOIR CHANGER FACILEMENT LES TITRES...*/
+
+
+/* Styles généraux */
+
+/*
+.main-menu {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.main-menu .top-menu {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+
+
+#commander {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #ff6b6b;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    text-align: center;
+    transition: background 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+#commander:hover {
+    background: #e63946;
+}
+
+.hero {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.hero .cta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.menu, .about, .contact {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.menu-items {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+*/
