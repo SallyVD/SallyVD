@@ -1,9 +1,13 @@
 /*Style generaux*/
 
 body{
-    font-family: arial, sans-serif;
+    font-family: "Comic sans MS", Comic Sans, cursive;
     margin: 0;
     padding: 0;
+}
+
+button{
+    font-family: "Comic sans MS", Comic Sans, cursive;
 }
 
 /*Barre de navigation*/
@@ -44,6 +48,7 @@ body{
     cursor: pointer; /* Change le curseur au survol */
 }
 
+
 .navigation{
     flex: 3;
     display: flex;
@@ -81,6 +86,7 @@ body{
     justify-content: center;
 }
 
+/*
 #commander{
     border: 2px solid black;
     background: pink;
@@ -92,6 +98,23 @@ body{
 }
 
 #commander:hover{
+    background: palevioletred;
+}
+*/
+#commander{
+    font-size: larger;
+    color: palevioletred;
+    background: pink;
+    cursor: pointer;
+    transform: scale(1.7);
+    border: none;
+    margin: 10px;
+    padding: 10px;
+}
+
+#commander:hover{
+    color: pink;
+    border: 2px solid pink;
     background: palevioletred;
 }
 
@@ -149,6 +172,7 @@ p{
     text-align: start; 
     /*font-size: small;*/
     font-weight: normal; /*ou lighter*/
+    width: 100%;
 }
 
 #sep1{
@@ -162,6 +186,7 @@ p{
 .grille-menu{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    width: 70vw;
 }
 
 .product{
@@ -221,16 +246,51 @@ p{
     background:grey;
 }
 
+.divider{
+    background-color:pink;
+
+}
 .info-footer{
-    display: flex;
-    justify-content: flex-start;
-    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 }
 
-.Contact{
+.Contact .Commander{
     padding: 20px;
     margin: 20px;
 }
+
+.footer-list{
+    list-style-type: none;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.footer-list-element a{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding: 5px;
+    color: black;
+    text-decoration: none;
+}
+
+.footer-list-element{
+    line-height: 70%;
+}
+
+a svg {
+    color: pink;
+    size: smaller;
+    border: 1px solid pink;
+}
+
+a svg:hover {
+    color: palevioletred;
+    size: smaller;
+    border: 1px solid palevioletred;
+}
+
 
 #cpright{
     text-align: center;
@@ -240,83 +300,36 @@ p{
     display: none !important;
 }
 
+@media (max-width: 768px) {
+    .navigation, header .commande {
+        display: none;  /* Cacher le menu par défaut */
+        flex-direction: column;
+        background: white;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+    }
+
+    .logo{
+        justify-content: space-around;
+    }
+
+    .main-menu.active {
+        display: flex; /* Afficher le menu quand il est activé */
+    }
+
+    .menu-toggle {
+        display: block; /* Afficher le bouton hamburger */
+        font-size: 50px;
+        padding: 10px;
+        cursor: pointer;
+    }
+}
 
 
 /*FAIRE EN SORTE DE POUVOIR CHANGER FACILEMENT LES TITRES...*/
 
 
-/* Styles généraux */
-
-/*
-.main-menu {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-    padding: 0;
-    margin: 0;
-}
-
-.main-menu .top-menu {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 1rem;
-}
-
-
-
-#commander {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #ff6b6b;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    text-align: center;
-    transition: background 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-#commander:hover {
-    background: #e63946;
-}
-
-.hero {
-    text-align: center;
-    padding: 50px 20px;
-    background: url('images/hero.jpg') no-repeat center center/cover;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
-}
-
-.hero .cta {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #333;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-}
-
-.menu, .about, .contact {
-    padding: 50px 20px;
-    text-align: center;
-}
-
-.menu-items {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-*/

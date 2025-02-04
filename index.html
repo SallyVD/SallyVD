@@ -9,6 +9,7 @@
     un restaurant Vegan, proposant des plats comme des hamburgers, buns, assiettes, bowls, poke, overnights oats, granola. 
     Uniquement à emporter grâce à Deliveroo et Ubereat">
 <!--<link rel="shortcut icon" href="favicon.ico" type="images/x-icon">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     
     <link rel="stylesheet" href="style.css">
 </head>
@@ -24,20 +25,21 @@
             <ul class="main-menu">
                 <!--aria-controls="accueil-menu" aria-expended="false"-->
                 <li><button id="accueil-button" class="top-menu" type="button">Accueil</button>
-                    <a href="/accueil"></a></li>
+                    <a href="index.html"></a></li>
                 <li><button id="menu-button" class="top-menu" type=" button">Menu</button>
-                    <a href="/menu"></a></li>
+                    <a href="pages/menu.html"></a></li>
                 <li><button id="photo-button" class="top-menu" type="button">Photos</button>
-                    <a href="/photos"></a></li>
+                    <a href="pages/photos.html"></a></li>
                 <li><button id="contact-button" class="top-menu" type="button">Contacts</button>
-                    <a href="/contact"></a></li>
+                    <a href="pages/contact.html"></a></li>
             </ul>
             
         </nav>
         <div class="commande">
             <button id="commander" type="button">Commander</button>
-            <a href="/commander"></a>
+            <a href="pages/commande.html"></a>
         </div>
+    
 
     </header>
 
@@ -52,7 +54,7 @@
             <p id="type-cuisine">Vegan • Burger • Poke • Toast</p> <!--Entourer de span-->
             <div class="commande">
                 <button id="commander" type="button">Commander</button>
-                <a href="/commander"></a>
+                <a href="pages/commande.html"></a>
             </div>
             </div>
         </section>
@@ -156,16 +158,51 @@
     <footer class="footer">
         <div class="info-footer">
             <div class="Contact">
-                <ul>Sally's Food Delivery
-                    <li>Page instagram avec logo</li>
-                    <li>Page Tiktok avec logo</li>
-                    <li>Page facebook avce logo</li>
+                <ul class="footer-list"><b>Sally's Food Delivery</b>
+                    <hr class="divider">
+                    <li class="footer-list-element">
+                        <a href="https://www.instagram.com/tonprofil" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37a4 4 0 1 1-4.63-4.63 4 4 0 0 1 4.63 4.63z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg> Instagram </a></li>
+                    <li class="footer-list-element">
+                        <a href="https://www.tiktok.com/@tonprofil" target="_blank" class="icon tiktok">
+                            <div class="logo-scial">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M9 19a5 5 0 0 0 5-5v-7h3a4 4 0 0 0 4 4"></path>
+                                <path d="M9 19a4 4 0 0 1-4-4 4 4 0 0 1 4-4h1v3"></path>
+                            </svg>
+                        </div>
+                        <div class="social">Tiktok</div>
+                        </a></li>
+                    <li class="footer-list-element">
+                        <a href="https://www.facebook.com/tonprofil" target="_blank" class="icon facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        Facebook</a></li>
                 </ul>
             </div>
             <div class="Commander">
-                <ul>Commander
-                    <li>Commander avec Uber</li>
-                    <li>Commander avec Deliveroo</li>
+                <ul class="footer-list"><b>Commander</b>
+                    <hr class="divider">
+                    <li class="footer-list-element">
+                        <a href="https://www.ubereats.com/" target="_blank" class="icon ubereats">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 12h18M3 6h18M3 18h18"></path>
+                            <circle cx="6" cy="18" r="2"></circle>
+                            <circle cx="18" cy="18" r="2"></circle>
+                        </svg>
+                    Commander avec Uber</a></li>
+                    <li class="footer-list-element">
+                        <a href="https://deliveroo.fr/" target="_blank" class="icon deliveroo">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 2l-1 5 5 2 2-5z"></path>
+                                <path d="M4 15l8-6 8 6v5H4z"></path>
+                            </svg>
+                        Commander avec Deliveroo</a></li>
                 </ul>
             </div>
         </div>
