@@ -50,7 +50,7 @@ button{
 
 
 .navigation{
-    flex: 3;
+    flex: 4;
     display: flex;
     justify-content: space-between;
     margin: 0;
@@ -81,9 +81,9 @@ button{
 }
 
 .commande{
-    flex: 1;
     display: flex;
     justify-content: center;
+    margin: 0 20px;
 }
 
 /*
@@ -186,7 +186,7 @@ p{
 .grille-menu{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    width: 70vw;
+    padding: 40px;
 }
 
 .product{
@@ -301,24 +301,36 @@ a svg:hover {
 }
 
 @media (max-width: 768px) {
-    .navigation, header .commande {
+
+    /*Navigation*/
+    .header{
+        width: 100vw;
+    }
+
+    .main-menu {
         display: none;  /* Cacher le menu par défaut */
         flex-direction: column;
-        background: white;
+        background: #d8c8b4;
         position: absolute;
-        top: 60px;
+        top: 120px;
         left: 0;
         width: 100%;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        padding: 10px;
+        padding: 20px;
+    }
+
+    header .commande{
+       display: flex;
+       justify-content: flex-start;
+       padding: 20px;
+    }
+
+    .main-menu.active{
+        display: flex; /* Afficher le menu quand il est activé */
     }
 
     .logo{
         justify-content: space-around;
-    }
-
-    .main-menu.active {
-        display: flex; /* Afficher le menu quand il est activé */
     }
 
     .menu-toggle {
@@ -327,9 +339,16 @@ a svg:hover {
         padding: 10px;
         cursor: pointer;
     }
+
+    /*Menu*/
+    .grille-menu, .info-footer{
+        grid-template-columns: 100%;
+    }
+    
 }
 
 
 /*FAIRE EN SORTE DE POUVOIR CHANGER FACILEMENT LES TITRES...*/
+/*RAJOUTER INFO*/
 
 
