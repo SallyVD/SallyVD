@@ -186,7 +186,7 @@ p{
 .grille-menu{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 40px;
+    padding: 20px 40px;
 }
 
 .product{
@@ -298,6 +298,33 @@ a svg:hover {
 
 .info{
     display: none !important;
+}
+
+/*PAGE MENU !!!!!!!!!!!!!!!!!!*/
+.menu-choice-list{
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+}
+
+.carte-et-menu{
+    border: 2px solid pink;
+}
+
+.menu-part{
+    margin: 30px 0 0 0;
+}
+.divider-menu{
+    width:25%;
+    height: 3px;
+    background-color: pink;
+    margin: 20px auto;
+    border: none;
+}
+
+.tab-button{
+    color:#555;
+    text-decoration: none;
 }
 
 @media (max-width: 768px) {
